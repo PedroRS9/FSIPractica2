@@ -1,4 +1,4 @@
-# FSI Practica 1
+# FSI Practica 2
 
 This is a repository for the second practice of the subject "Fundamentos de los Sistemas Inteligentes" in the University of Las Palmas de Gran Canaria.
 The practice consists in making neuronal networks for classifying images of a vegetables dataset. The dataset is composed of 15 vegetables: Bean, Bitter Gourd, Bottle Gourd, Brinjal, Broccoli, Cabbage, Capsicum, Carrot, Cauliflower, Cucumber, Papaya, Potato, Pumpkin, Radish and Tomato.
