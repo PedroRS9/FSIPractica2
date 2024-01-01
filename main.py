@@ -6,7 +6,21 @@ from keras.models import load_model
 from keras.callbacks import EarlyStopping
 from plotting import plot_training_history, plot_confusion_matrix
 from sklearn.metrics import confusion_matrix
+
+
+# Set seed for reproducibility
+import random
 import numpy as np
+import tensorflow as tf
+seed_value = 42
+os.environ['PYTHONHASHSEED']=str(seed_value)
+np.random.seed(seed_value)
+tf.random.set_seed(seed_value)
+random.seed(seed_value)
+session_conf = tf.compat.v1.ConfigProto(intra_op_parallelism_threads=1, inter_op_parallelism_threads=1)
+sess = tf.compat.v1.Session(graph=tf.compat.v1.get_default_graph(), config=session_conf)
+tf.compat.v1.keras.backend.set_session(sess)
+# ----------------------------
 
 test_generator, train_generator, validation_generator = prepare_data(
     img_width,
@@ -27,8 +41,8 @@ model.compile(loss='categorical_crossentropy', optimizer='adam', metrics=['accur
 history_of_train = model.fit(
     train_generator,
     epochs=num_epochs,
-    validation_data=validation_generator,
-    callbacks=[early_stopping]
+    validation_data=validation_generator
+    #callbacks=[early_stopping]
 )
 # save model
 model.save(model_name)
