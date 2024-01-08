@@ -19,7 +19,12 @@ def prepare_data(img_width, img_height, batch_size, test_directory, train_direct
         rotation_range=5,
         horizontal_flip=True
     )
-    validation_datagen = ImageDataGenerator(rescale=1. / 255)
+    validation_datagen = ImageDataGenerator(
+        rescale=1. / 255,
+        zoom_range=0.2,
+        rotation_range=5,
+        horizontal_flip=True
+    )
 
     test_generator = test_datagen.flow_from_directory(
         test_directory,

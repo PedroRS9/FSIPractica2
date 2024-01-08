@@ -32,14 +32,14 @@ else:
     model = construct_keras_model(img_width, img_height)
 
 # compile the model
-early_stopping = EarlyStopping(monitor='val_loss', patience=10)
+early_stopping = EarlyStopping(monitor='val_loss', patience=10, verbose=1)
 model.compile(loss='categorical_crossentropy', optimizer='adam', metrics=['accuracy'])
 # train the model
-history_of_train = model.fit(
+history_of_train = model.fit_generator(
     train_generator,
     epochs=num_epochs,
     validation_data=validation_generator
-    #callbacks=[early_stopping]
+    ,callbacks=[early_stopping]
 )
 # save model
 model.save(model_name)
