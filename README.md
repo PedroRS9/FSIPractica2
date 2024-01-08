@@ -46,6 +46,12 @@ This file contains the code for creating the keras model of the convolutional ne
 #### plotting.py
 This file contains the code for plotting graphs (training history and confusion matrix).
 
-### Authors
+## Model trainings and model download
+
+If you want to see the trainings we did, check this PDF: [FSI Practica 2 - Trainings](https://alumnosulpgc-my.sharepoint.com/:b:/g/personal/pedro_romero105_alu_ulpgc_es/EYDMen-c82dAn1gcVOZLG9cBf1tkXwFqbqWHvji6r5_VaA?e=p5Z8FB)
+
+If you want to download the last trained model (training nº6 in which we got 98.16% accuracy and 7.83% loss) you can download it here: [model.h5](https://alumnosulpgc-my.sharepoint.com/:u:/g/personal/pedro_romero105_alu_ulpgc_es/EY220OMLauZKtvoAM4aX0HMB3IFsPjaRUPqdik4sQ8FBKA?e=agfwjI)
+
+## Authors
 * **Pedro Romero Suárez** - [PedroRS9](https://github.com/PedroRS9)
 * **Nahuel Cosme Díaz Vera** - [NahuelCosmeDiazVera](https://github.com/NahuelCosme-DiazVera)
